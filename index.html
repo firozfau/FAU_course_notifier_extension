@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAU Course Notifier</title>
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <h1>FAU Course Notifier</h1>
+    <span class="valid_urlexample"><b style="color:red">Valid url: </b>  https://www.studon.fau.de/xxxxxxxx_join.html</span>
+    <form id="url-form">
+        <textarea id="studon-url" placeholder="Enter URL"></textarea>
+        <button type="button" class="add-url" id="add-url">Add URL</button>
+    </form>
+    <p id="error-message" class="error-message" style="color: red;"></p>
+    <div id="url-list" class="url-list"></div>
+</body>
+</html>
+
+
+<style>
+body{
+    width: 310px;
+    height: auto;
+    min-height: 151px;
+}
+
+textarea{
+    float: left;
+    width: 219px;
+    height: 44px;
+}
+
+.error-message{ float: left; width: 100%;}
+.add-url {
+    float: left;
+    margin: 10px 4px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+h1{ margin-bottom: 0px;}
+.valid_urlexample{ width: 100%; height: auto; font-size: 8px; color: green; float: left; margin: 10px 0px;}
+.url-list{ float: left; width: 100%; margin: 5px 0px;}
+
+div#url-list a {
+    float: left;
+    width: 70%;
+    margin: 5px 0px;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+div#url-list span.eachCourseSpan{
+    float: left;
+    width: 100%;
+}
+
+.delete-url{
+    width: auto;
+    height: 24px;
+    border: none;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+    float: right;
+}
+
+div#url-list span.eachCourseSpan:hover{
+    background: #ccc;
+}
+
+</style>
